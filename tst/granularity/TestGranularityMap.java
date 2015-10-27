@@ -10,6 +10,9 @@ public class TestGranularityMap {
 		map.addOne("Joint", 3);
 		map.addOne("Explanation", 45);
 		map.addOne("Comparison", 1);
+		map.addOne("Comparison", 1);
+		map.addOne("Comparison", 2);
+		map.addOne("Span", 3);
 		
 		map.write(System.out);
 		map.export(System.out);
