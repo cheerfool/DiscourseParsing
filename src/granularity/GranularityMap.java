@@ -21,20 +21,40 @@ public class GranularityMap {
 
 	void write(OutputStream os) {
 		PrintWriter pw = new PrintWriter(os);
-		pw.print("Relation\t");
+		pw.format("%-20s\t", "Relation");
 		for (int i = 0; i < 29; i++)
 			pw.print((i + 1) + "\t");
 		pw.println("30+\t");
+		for (int i = 0; i < 260; i++)
+			pw.print("-");
+		pw.println();
 
 		for (Entry<String, int[]> record : map.entrySet()) {
 			String relation = record.getKey();
 			int[] freq = record.getValue();
-			pw.print(relation + "\t");
+			pw.format("%-20s\t", relation);
 			for (int n : freq)
 				pw.print(n + "\t");
 			pw.println();
 		}
+		pw.flush();
+	}
 
+	void export(OutputStream os) {
+		PrintWriter pw = new PrintWriter(os);
+		pw.print("Relation,");
+		for (int i = 0; i < 29; i++)
+			pw.print((i + 1) + ",");
+		pw.println("30+");
+
+		for (Entry<String, int[]> record : map.entrySet()) {
+			String relation = record.getKey();
+			int[] freq = record.getValue();
+			pw.print(relation + ",");
+			for (int i = 0; i < 29; i++)
+				pw.print(freq[i] + ",");
+			pw.println(freq[29]);
+		}
 		pw.flush();
 	}
 

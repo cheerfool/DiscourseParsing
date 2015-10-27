@@ -1,7 +1,5 @@
 package granularity;
 
-import static org.junit.Assert.*;
-
 import org.junit.Test;
 
 public class TestGranularityMap {
@@ -14,6 +12,7 @@ public class TestGranularityMap {
 		map.addOne("Comparison", 1);
 		
 		map.write(System.out);
+		map.export(System.out);
 	}
 
 }
