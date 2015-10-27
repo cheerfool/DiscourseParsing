@@ -1,13 +1,14 @@
 package granularity;
 
 import java.io.IOException;
+import java.util.Map.Entry;
 
-import org.junit.Test;
 import org.junit.Assert;
+import org.junit.Test;
 
 public class TestRelationClassifier {
 
-	String relationPath = "D:/Data/RST-DT/RelationClasses.txt";
+	String relationPath = CountSpan.relationClassPath;
 
 	@Test
 	public void test() throws IOException {
@@ -17,6 +18,7 @@ public class TestRelationClassifier {
 //		}
 //		System.out.println(classifier.map.size());
 //		System.out.println(classifier.classify("Problem-Solution"));
+//		System.out.println(classifier.classify("span"));
 		
 		Assert.assertTrue(classifier.map.size() == 114);
 		Assert.assertEquals("Elaboration", classifier.classify("elaboration-additional"));
