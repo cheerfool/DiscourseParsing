@@ -8,7 +8,7 @@ import java.io.IOException;
 public class SplitFile {
 
 	public static final String rootDir = "D:/Dropbox/Research/Dataset/RST-DT/";
-	//public static final String rootDir = "~/Projects/dataset/RST-DT/";
+	//public static final String rootDir = "/Users/jkl/Projects/dataset/RST-DT/";
 	public static final String tokenFilePath = rootDir + "token/";
 	public static final String outputPath = rootDir + "sentence/";
 

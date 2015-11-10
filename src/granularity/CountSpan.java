@@ -8,7 +8,7 @@ import java.io.IOException;
 public class CountSpan {
 
 	public static final String rootDir = "D:/Data/RST-DT/";
-	//public static final String rootDir = "~/Projects/dataset/RST-DT/";
+	//public static final String rootDir = "/Users/jkl/Projects/dataset/RST-DT/";
 	public static final String rstTreesDir = rootDir + "ALL/";
 	public static final String relationClassPath = rootDir + "RelationClasses.txt";
 	public static final String resultPath = rootDir + "results/relationLevel.csv";
