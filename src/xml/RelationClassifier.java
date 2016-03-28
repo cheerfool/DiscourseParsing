@@ -1,4 +1,4 @@
-package granularity;
+package xml;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -10,7 +10,7 @@ public class RelationClassifier {
 
 	public HashMap<String, String> map = new HashMap<String, String>();
 
-	public RelationClassifier(String filename) throws IOException {
+	RelationClassifier(String filename) throws IOException {
 		FileInputStream fis = new FileInputStream(filename);
 		BufferedReader br = new BufferedReader(new InputStreamReader(fis));
 
